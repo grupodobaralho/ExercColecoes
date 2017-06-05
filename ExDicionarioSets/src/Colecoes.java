@@ -89,4 +89,28 @@ public class Colecoes {
 		return array;
 	}
 
+	public ArrayList<String> consultaQuatro(String texto1, String texto2) {
+		ArrayList<String> array = new ArrayList<>();
+		HashMap<String, Integer> aux = arquivo_palavra.get(texto1);
+		if (aux == null)
+			return null;
+
+		HashMap<String, Integer> aux2 = arquivo_palavra.get(texto2);
+		if (aux2 == null)
+			return null;
+
+		for (HashMap.Entry<String, Integer> e : aux.entrySet()) {
+			if (aux2.containsKey(e.getKey())) {
+
+				array.add(e.getKey());
+			}
+
+			else
+				continue;
+
+		}
+
+		return array;
+	}
+
 }

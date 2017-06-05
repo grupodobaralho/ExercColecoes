@@ -36,7 +36,7 @@ public class App {
 		}
 				
 
-		ArrayList<String> hl1 = c.consultaUm("engenheiro");
+		ArrayList<String> hl1 = c.consultaUm("arquimedes");
 		if (hl1 != null) {
 			System.out.println(hl1);
 		} else {
@@ -61,6 +61,13 @@ public class App {
 		ArrayList<String> hl3 = c.consultaTres("texto01.txt");
 		if (hl3 != null) {
 			System.out.println(hl3);
+		} else {
+			System.out.println("Nao existem arquivo com este nome!");
+		}
+		
+		ArrayList<String> hl4 = c.consultaQuatro("texto02.txt", "texto04.txt");
+		if (hl4 != null) {
+			System.out.println(hl4);
 		} else {
 			System.out.println("Nao existem arquivo com este nome!");
 		}
